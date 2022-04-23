@@ -1,6 +1,6 @@
 * {
-  margin:0;
-   padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -8,8 +8,24 @@ body {
 }
 
 header {
-	display:flex;
+	display: flex;
 	justify-content: center;
+}
+
+#img-title {
+	width: 25em;
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	padding: 20px;
+}
+
+main {
+	display: flex;
+	justify-content: space-between;
+	align-items:flex-start;
 }
 
 #search-By-Type {
@@ -29,11 +45,6 @@ header {
 	color: white;
 }
 
-main {
-	display: flex;
-	justify-content: center;
-}
-
 #container {
 	display: flex;
 	flex-direction: column;
@@ -43,14 +54,15 @@ main {
 #principal {
 	display: flex;
 	justify-content: space-between;
+	background-color:  #e9c79f;
 }
 
-#info-Pokemon { 
+#info-Pokemon {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	flex-wrap:wrap;
+	flex-wrap: wrap;
 }
 
 .li-pokemon {
@@ -68,14 +80,21 @@ main {
 }
 
 aside {
-	padding: 0px 30px 20px 30px;
+	padding: 0px 0px 0px 0px;
 	margin-bottom: 20px;
 	width: 40%;
 }
 
-#legend-p {
-	margin-bottom: 60px;
+#div-lateral {
+	background-color: #e9c79f;
+}
+
+#titulo-rolagem {
+	padding: 40px 0px 25px 0px;	
+	color:#412709;
 	font-weight: bolder;
+	font-size: 1.3em;
+	text-align: center;
 }
 
 .form-check {
@@ -83,30 +102,20 @@ aside {
 	align-items: center;
 }
 
-nav {
-	display: flex;
-	flex-direction: row;
-	padding: 20px;
+#btn-search-by-Type {
+	margin: 40px;
 }
 
-main {
-	display: flex;
-	justify-content: space-between;
-	align-items: baseline;
-}
-
-#img-title {
-  width: 25em;
-}
-
-#search-By-Name, #search-By-Generation, #search-By-Name-selected   {
+#search-By-Name,
+#search-By-Generation,
+#search-By-Name-selected {
 	display: flex;
 	flex-direction: row;
 	padding: 10px;
 }
 
 .selected {
-	background-color: #e9c79f;
+	background-color: #e4b47d;
 }
 
 .pokemon-image-type {
@@ -115,8 +124,8 @@ main {
 }
 
 footer {
-  padding: 30px;
-  background-color: #ccb0a0;
+	padding: 30px;
+	background-color: #ccb0a0;
 }
 
 #img-footer {
@@ -128,7 +137,7 @@ li a {
 }
 
 ul li a {
-  color: black;
+	color: black;
 }
 
 hr {
@@ -136,5 +145,13 @@ hr {
 }
 
 .footer-copyright {
-  text-align: center;
+	text-align: center;
+}
+
+#barra-de-rolagem {
+	display: block;
+	width: 350px;
+	height: 200px;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
 }

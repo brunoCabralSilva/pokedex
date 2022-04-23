@@ -3,7 +3,7 @@ import { type } from '../data/data.js';
 //Conjunto de divs que irão receber um tipo de pokémon cada
 const cadaTipo = document.getElementsByClassName('form-check');
 //aside onde ficarão as informações de tipo para serem selecionadas
-const buscaPorTipo = document.getElementById('search-By-Type');
+const buscaPorTipo = document.getElementById('barra-de-rolagem');
 //input onde poderá ser digitado o nome de um pokémon
 const inputInsereNome = document.getElementById('input-search-one-pokemon');
 //Botão que aciona evento de procurar pokémon pelo nome inserido em input
@@ -22,37 +22,26 @@ const buttonNameSelect = document.getElementById('btn-search-by-name');
 const selectByName = document.getElementById('name-selected');
 //<select> que contém as gerações de todos os pokémon
 const selectByGeneration = document.getElementById('generation-selected');
+
+const buttonSearchType = document.getElementById('btn-search-by-Type');
 //gera da api todos os nomes dos pokémon existentes
-for (let i = 1; i <= 898; i += 1) {
-  fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-    .then((resposta) => resposta.json())
-    .then((respostaJson) => {
-      const objetoPokemon = geraObjetoPokemon(respostaJson);
-      const pokemon = document.createElement('option');
-      pokemon.value = respostaJson.name;
-      pokemon.innerText = `#${respostaJson.id} - ${respostaJson.name}`;
-      selectByName.appendChild(pokemon);
-      acrescentaPokemon(objetoPokemon);
-    })
-    .catch()
-}
-//busca na api todos os pokémon que possuem o tipo selecionado
-function procuraTipoPorPokemon(cadaTipo, nome) {
-  if (typeof (nome) === 'string') nome = nome.toLowerCase();
-  fetch(`https://pokeapi.co/api/v2/pokemon/${nome}`)
-    .then((response) => response.json())
-    .then((responseJson) => {
-      const objetoPokemon = geraObjetoPokemon(responseJson);
-      if (objetoPokemon.type.includes(cadaTipo.id)) {
-        acrescentaPokemon(objetoPokemon);
-      }
-    })
-    .catch()
-}
+// for (let i = 1; i <= 898; i += 1) {
+//   fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
+//     .then((resposta) => resposta.json())
+//     .then((respostaJson) => {
+//       const objetoPokemon = geraObjetoPokemon(respostaJson);
+//       const pokemon = document.createElement('option');
+//       pokemon.value = respostaJson.name;
+//       pokemon.innerText = `#${respostaJson.id} - ${respostaJson.name}`;
+//       selectByName.appendChild(pokemon);
+//       acrescentaPokemon(objetoPokemon);
+//     })
+//     .catch()
+// }
 //Cria cada tipo de pokémon na barra lateral
 type.forEach((tipo) => {
   //cria de div para cada tipo que será exibido
-  const newDiv = document.createElement('div');
+  const newDiv = document.createElement('scroll-page');
   newDiv.setAttribute('class', 'form-check mb-3');
   newDiv.setAttribute('id', tipo.id);
   //cria imagem para cada tipo
@@ -70,25 +59,6 @@ type.forEach((tipo) => {
   newDiv.appendChild(newLabel);
   buscaPorTipo.appendChild(newDiv);
 });
-
-for (let i = 0; i < cadaTipo.length; i += 1) {
-  const cadaTipo = document.getElementsByClassName('form-check')[i];
-  cadaTipo.addEventListener('click', () => {
-    if (cadaTipo.className.includes('selected')) {
-      cadaTipo.classList.remove('selected');
-      cadaTipo.style.fontWeight = 'normal';
-      removeElementos();
-    }
-    else {
-      cadaTipo.classList.add('selected');
-      removeElementos();
-      cadaTipo.style.fontWeight = 'bolder';
-      for (let i = 1; i <= 898; i += 1) {
-        procuraTipoPorPokemon(cadaTipo, i);
-      }
-    }
-  });
-}
 //cria elementos que serão exibidos no html
 function acrescentaPokemon(objeto) {
   const tiposOrdenados = objeto.type.sort();
@@ -209,5 +179,65 @@ butonGeneration.addEventListener('click', () => {
     default:
       console.log('Esta geração não existe');
       break;
+  }
+});
+//Evento criado para adicionar 'selected' para cada div que representa um tipo 
+for (let index = 0; index < cadaTipo.length; index += 1) {
+  const cadaTipo = document.getElementsByClassName('form-check')[index];
+  cadaTipo.addEventListener('click', () => {
+    if (cadaTipo.className.includes('selected')) {
+      cadaTipo.classList.remove('selected');
+      cadaTipo.style.fontWeight = 'normal';
+    }
+    else {
+      cadaTipo.classList.add('selected');
+      cadaTipo.style.fontWeight = 'bolder';
+    }
+  });
+}
+//busca na api todos os pokémon que possuem o tipo selecionado
+function procuraTipoPorPokemon(cadaTipo, nome) {
+  fetch(`https://pokeapi.co/api/v2/pokemon/${nome}`)
+    .then((response) => response.json())
+    .then((responseJson) => {
+      const objetoPokemon = geraObjetoPokemon(responseJson);
+      if (objetoPokemon.type.includes(cadaTipo)) {
+        acrescentaPokemon(objetoPokemon);
+      }
+    })
+    .catch()
+}
+
+buttonSearchType.addEventListener('click', () => {
+  removeElementos();
+  const arraySelected = [];
+  const todosOsTipos = document.getElementsByClassName('form-check');
+  for (let j = 0; j < todosOsTipos.length; j += 1) {
+    const buscaporTipo = document.getElementsByClassName('form-check')[j];
+    if (buscaporTipo.className.includes('selected')) {
+      arraySelected.push(buscaporTipo.id);
+    }
+  }
+  console.log(arraySelected.length);
+  if (arraySelected.length === 1) {
+    for (let n = 1; n < 898; n += 1) {
+      procuraTipoPorPokemon(arraySelected[0], n);
+    }
+  }
+  else if (arraySelected.length === 2) {
+    for (let k = 1; k < 898; k += 1) {
+      fetch(`https://pokeapi.co/api/v2/pokemon/${k}`)
+        .then((response) => response.json())
+        .then((responseJson) => {
+          const objetoPokemon = geraObjetoPokemon(responseJson);
+          if (objetoPokemon.type.includes(arraySelected[0]) && objetoPokemon.type.includes(arraySelected[1])) {
+            acrescentaPokemon(objetoPokemon);
+          }
+        })
+    }
+  }
+
+  else {
+    window.alert('Não existem pokémon com mais de 2 tipos');
   }
 });
