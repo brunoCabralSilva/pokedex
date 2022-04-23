@@ -1,71 +1,91 @@
-const tiposPokemon = [
+export const type = [
     {
-        tipo: 'Normal',
-        image: '../imagens/type-logo/normal.png',
+      tipo: 'Normal',
+      image: '../imagens/type-logo/normal.png',
+      id: 'normal',
     },
     {
-        tipo: 'Fogo',
-        image: '../imagens/type-logo/fire.png',
+      tipo: 'Fogo',
+      image: '../imagens/type-logo/fire.png',
+      id: 'fire',
     },
     {
-        tipo: 'Água',
-        image: '../imagens/type-logo/water.png',
+      tipo: 'Água',
+      image: '../imagens/type-logo/water.png',
+      id: 'water',
     },
     {
-        tipo: 'Grama',
-        image: '../imagens/type-logo/grass.png',
+      tipo: 'Grama',
+      image: '../imagens/type-logo/grass.png',
+      id: 'grass',
     },
     {
-        tipo: 'Voador',
-        image: '../imagens/type-logo/fly.png',
+      tipo: 'Voador',
+      image: '../imagens/type-logo/flying.png',
+      id: 'flying',
     },
     {
-        tipo: 'Lutador',
-        image: '../imagens/type-logo/fighting.png',
+      tipo: 'Lutador',
+      image: '../imagens/type-logo/fighting.png',
+      id: 'fighting',
     },
     {
-        tipo: 'Venenoso',
-        image: '../imagens/type-logo/electric.png',
+      tipo: 'Elétrico',
+      image: '../imagens/type-logo/electric.png',
+      id: 'electric',
     },
     {
-        tipo: 'Terrestre',
-        image: '../imagens/type-logo/ground.png',
+      tipo: 'Venenoso',
+      image: '../imagens/type-logo/poison.png',
+      id: 'poison',
     },
     {
-        tipo: 'Pedra',
-        image: '../imagens/type-logo/rock.png',
+      tipo: 'Terrestre',
+      image: '../imagens/type-logo/ground.png',
+      id: 'ground',
     },
     {
-        tipo: 'Psíquico',
-        image: '../imagens/type-logo/psychic.png',
+      tipo: 'Pedra',
+      image: '../imagens/type-logo/rock.png',
+      id: 'rock',
     },
     {
-        tipo: 'Gelo',
-        image: '../imagens/type-logo/ice.png',
+      tipo: 'Psíquico',
+      image: '../imagens/type-logo/psychic.png',
+      id: 'psychic',
     },
     {
-        tipo: 'Inseto',
-        image: '../imagens/type-logo/bug.png',
+      tipo: 'Gelo',
+      image: '../imagens/type-logo/ice.png',
+      id: 'ice',
     },
     {
-        tipo: 'Fantasma',
-        image: '../imagens/type-logo/ghost.png',
+      tipo: 'Inseto',
+      image: '../imagens/type-logo/bug.png',
+      id: 'bug',
     },
     {
-        tipo: 'Aço',
-        image: '../imagens/type-logo/steel.png',
+      tipo: 'Fantasma',
+      image: '../imagens/type-logo/ghost.png',
+      id: 'ghost'
     },
     {
-        tipo: 'Dragão',
-        image: '../imagens/type-logo/dragon.png',
+      tipo: 'Aço',
+      image: '../imagens/type-logo/steel.png',
+      id: 'steel',
     },
     {
-        tipo: 'Sombrio',
-        image: '../imagens/type-logo/dark.png',
+      tipo: 'Dragão',
+      image: '../imagens/type-logo/dragon.png',
+      id: 'dragon',
     },
     {
-        tipo: 'Fada',
-        image: '../imagens/type-logo/fairy.png',
+      tipo: 'Sombrio',
+      image: '../imagens/type-logo/dark.png',
+      id: 'dark',
+    },
+    {
+      tipo: 'Fada',
+      image: '../imagens/type-logo/fairy.png',
+      id: 'fairy',
     }];
-
-module.exports = tiposPokemon ;
