@@ -275,7 +275,7 @@ hr {
 		display: none;
 	}
 
-	.type-pokemon-image	 {
+	.type-pokemon-image {
 		margin-right: 40px;
 	}
 
@@ -284,6 +284,7 @@ hr {
 		flex-direction: column;
 		justify-content: center;
 		margin: auto;
+		width: 100%;
 	}
 
 	nav {
@@ -293,10 +294,10 @@ hr {
 	}
 
 	aside {
-		width: 80%;
+		width: 75%;
 		margin: auto;
 	}
-	
+
 
 	#search-By-Name,
 	#search-By-Generation,
