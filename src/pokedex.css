@@ -295,12 +295,13 @@ hr {
 	}
 
 	aside {
-		width: 80%;
+		width: 70%;
 		margin: auto;
 	}
 
 	#barra-de-rolagem {
 		height: 170px;
+		width: 100%;
 	}
 
 	#search-By-Name,
@@ -387,7 +388,6 @@ hr {
 	}
 
 	.form-check {
-		width: 80%;
 	}
 
 	#hr {
