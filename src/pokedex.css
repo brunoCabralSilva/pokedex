@@ -237,6 +237,22 @@ hr {
 		background-color: red;
 	}
 
+	header {
+		display: flex;
+		justify-content: center;
+		animation: mudaImagens 200s linear infinite alternate;
+		background-size: cover;
+		background-image: url('../imagens/wallpaper/gengar.jpg');
+		background-position: 50% 40%;
+		height: 180px;
+	}
+
+	#img-title {
+		margin-top: 90px;
+		width: 200px;
+		height: 100px;
+	}
+
 	.divLateral {
 		display: none;
 	}
@@ -259,9 +275,58 @@ hr {
 	main {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 	}
 
 	#search-By-Type {
-		position: fixed;
+		display: none;
+	}
+
+	#title-section {
+		margin: 20px 0px 30px 0px;
+		padding-top: 0px;
+
+	}
+
+	.li-pokemon {
+		color: white;
+		text-shadow: 0.1em 0.1em black;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		list-style-type: none;
+		font-weight: bolder;
+		margin: 10px;
+		width: 200px;
+		height: 300px;
+		border-radius: 7px;
+		border: 1px solid rgb(116, 112, 112);
+		background-image: url('../imagens/wallpaper/wallpaper.jpg');
+		background-position: 5% 5%;
+	}
+
+	footer {
+		padding: 30px;
+		background-color: #1f2046;
+		color: white;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.col-sm-3,
+	.row,
+	.col-sm-2 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 1em;
+	}
+
+	.footer-copyright {
+		width: 80%;
+	}
+
+	#img-footer 
 	}
 }
