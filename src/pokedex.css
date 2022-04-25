@@ -231,3 +231,7 @@ hr {
 	overflow-y: scroll;
 	scroll-behavior: smooth;
 }
+
+@media (max-width: 600px) {
+	body { background-color: red;}
+}
