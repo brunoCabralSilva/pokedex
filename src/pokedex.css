@@ -238,7 +238,7 @@ hr {
 		display: flex;
 		justify-content: center;
 		animation: mudaImagens 200s linear infinite alternate;
-		background-size: cover;
+		background-size: 800px 400px;
 		background-image: url('../imagens/wallpaper/gengar.jpg');
 		background-position: 50% 40%;
 		height: 180px;
@@ -320,8 +320,6 @@ hr {
 		align-items: center;
 		font-size: 1.1em;
 	}
-
-	
 
 	.ul-footer {
 		text-align: center;
