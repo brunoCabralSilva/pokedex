@@ -11,7 +11,7 @@ body {
 header {
 	display: flex;
 	justify-content: center;
-	animation: mudaImagens 200s linear infinite alternate;
+	animation: mudaImagens 15s linear 3s infinite alternate;
 	background-size: cover;
 	background-image: url('../imagens/wallpaper/gengar.jpg');
 	background-position: 50% 40%;
@@ -80,13 +80,17 @@ p {
 	height: 300px;
 }
 
-main {
-	display: flex;
-}
+main {}
 
 nav {
 	display: flex;
 	flex-direction: row;
+}
+
+#teste {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: baseline;
 }
 
 .btn {
@@ -111,13 +115,18 @@ nav {
 	justify-content: space-between;
 }
 
+#info-cada-Pokemon {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 #title-section {
-	margin: 30px 0px 30px 0px;
+	margin: 30px 00px 30px 25px;
 	color: white;
 	text-shadow: 0.1em 0.1em black;
 	font-weight: bolder;
-	width: 80%;
-	text-align: center;
+	text-align: left;
 }
 
 #info-Pokemon {
@@ -151,13 +160,15 @@ aside {
 	padding: 0px 0px 0px 0px;
 	margin: 0px 20px 30px 0px;
 	width: 30%;
-}
-
-#div-lateral {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
+
+#info {
+	width: 90%;
+}
+
 
 #titulo-rolagem {
 	padding: 10px 0px 0px 0px;
@@ -253,8 +264,26 @@ hr {
 		height: 100px;
 	}
 
+	#teste {
+		display: flex;
+		flex-direction: column;
+		align-items: baseline;
+		justify-content: center;
+	}
+
 	.divLateral {
 		display: none;
+	}
+
+	.type-pokemon-image	 {
+		margin-right: 40px;
+	}
+
+	#info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: auto;
 	}
 
 	nav {
@@ -262,6 +291,12 @@ hr {
 		flex-direction: column;
 		justify-content: center;
 	}
+
+	aside {
+		width: 80%;
+		margin: auto;
+	}
+	
 
 	#search-By-Name,
 	#search-By-Generation,
@@ -278,14 +313,11 @@ hr {
 		justify-content: center;
 	}
 
-	#search-By-Type {
-		display: none;
-	}
 
 	#title-section {
 		margin: 20px 0px 30px 0px;
 		padding-top: 0px;
-
+		text-align: center;
 	}
 
 	.li-pokemon {
@@ -326,7 +358,7 @@ hr {
 
 	.ul-footer {
 		text-align: center;
-		padding: 3px 0px 3px 0px; 
+		padding: 3px 0px 3px 0px;
 	}
 
 	.h5-footer {
@@ -343,6 +375,7 @@ hr {
 	#copyright {
 		text-align: center;
 	}
+
 	.footer-copyright {
 		font-size: 1.3em;
 	}
