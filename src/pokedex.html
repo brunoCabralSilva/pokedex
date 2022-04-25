@@ -12,26 +12,24 @@
 </head>
 
 <body>
-
 	<header>
 		<img src='../imagens/poke-logo.png' id='img-title'>
 	</header>
-
 	<main>
 		<section id='container'>
 			<nav id='principal'>
-				<div class="navbar navbar-expand-lg navbar-light">
+				<div>
 					<div id='search-By-Name'>
-						<input class="form-control" type="search" placeholder="Digite um Pokémon" aria-label="Search"
+						<input class='form-control' style="background-color: #aaabe7" type="search" placeholder="Digite um Pokémon" aria-label="Search"
 							id='input-search-one-pokemon'>
 						<button class="btn" id='btn-search-one-pokemon'>Buscar</button>
 					</div>
 				</div>
-				<div class="navbar navbar-expand-lg navbar-light">
+				<div>
 					<div id="By-Name-selected">
-						<ul class="navbar-nav me-auto">
+						<ul class="navbar-nav">
 							<li id='search-By-Name-selected'>
-								<select class="form-select" aria-label="Default select example" id='name-selected'>
+								<select style="background-color: #aaabe7" class='form-control' aria-label="Default select example" id='name-selected'>
 									<option value='0' selected>Escolha um Pokémon</option>
 								</select>
 								<button class="btn" id='btn-search-by-name'>Buscar</button>
@@ -39,11 +37,11 @@
 						</ul>
 					</div>
 				</div>
-				<div class="navbar navbar-expand-lg navbar-light">
+				<div>
 					<div>
-						<ul class="navbar-nav me-auto">
+						<ul class="navbar-nav">
 							<li id="search-By-Generation">
-								<select class="form-select" id='generation-selected'>
+								<select style="background-color: #aaabe7" class='form-control' id='generation-selected'>
 									<option value='0' selected>Região</option>
 									<option value="1">Kanto (1ª Geração)</option>
 									<option value="2">Johto (2ª Geração)</option>
@@ -60,6 +58,7 @@
 					</div>
 				</div>
 			</nav>
+			<h2 id='title-section' > Todos os Pokémon</h2>
 			<section>
 				<article id='info'>
 					<ul id='info-Pokemon'>
@@ -68,11 +67,11 @@
 			</section>
 		</section>
 		<aside id='search-By-Type'>
-			<div id = 'div-lateral'>
-				<p id = 'titulo-rolagem'>Pesquise por tipo de Pokémon</p>	
-				<scroll-container id = 'barra-de-rolagem'>
-				  </scroll-container>
-				  <button class="btn" id='btn-search-by-Type'>Buscar</button>
+			<div id='div-lateral'>
+				<p id='titulo-rolagem'>Pesquise por tipo de Pokémon</p>
+				<scroll-container id='barra-de-rolagem'>
+				</scroll-container>
+				<button class="btn" id='btn-search-by-Type'>Buscar</button>
 			</div>
 		</aside>
 	</main>

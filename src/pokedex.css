@@ -4,57 +4,116 @@
 }
 
 body {
-	background-color: #F6E7D8;
+	background-image: url('../imagens/wallpaper/wallpaper.jpg');
+	background-size: cover;
 }
 
 header {
 	display: flex;
 	justify-content: center;
+	animation: mudaImagens 200s linear infinite alternate;
+	background-size: cover;
+	background-image: url('../imagens/wallpaper/gengar.jpg');
+	background-position: 50% 40%;
+	height: 400px;
+}
+
+@keyframes mudaImagens {
+	0% {
+		background-image: url('../imagens/wallpaper/gengar.jpg');
+		background-position: 50% 38%;
+	}
+
+	10% {
+		background-image: url('../imagens/wallpaper/umbreon.jpg');
+		background-position: 50% 40%;
+	}
+
+	20% {
+		background-image: url('../imagens/wallpaper/tyranitar.jpg');
+		background-position: 50% 38%;
+	}
+
+	30% {
+		background-image: url('../imagens/wallpaper/Sirfetch’d.jpg');
+		background-position: 50% 40%;
+	}
+
+	40% {
+		background-image: url('../imagens/wallpaper/Centiskorch.jpg');
+		background-position: 50% 45%;
+	}
+
+	50% {
+		background-image: url('../imagens/wallpaper/Charizard.jpg');
+		background-position: 50% 40%;
+	}
+
+	60% {
+		background-image: url('../imagens/wallpaper/moltres.jpg');
+		background-position: 50% 40%;
+	}
+
+	80% {
+		background-image: url('../imagens/wallpaper/rayquaza.jpg');
+		background-position: 50% 45%;
+	}
+
+	90% {
+		background-image: url('../imagens/wallpaper/sylveon.jpg');
+		background-position: 50% 42%;
+	}
+
+	98% {
+		background-image: url('../imagens/wallpaper/gengar.jpg');
+		background-position: 50% 38%;
+	}
 }
 
 #img-title {
-	width: 25em;
+	margin-top: 150px;
+	width: 500px;
+	height: 300px;
+}
+
+main {
+	display: flex;
 }
 
 nav {
 	display: flex;
 	flex-direction: row;
-	padding: 20px;
-}
-
-main {
-	display: flex;
-	justify-content: space-between;
-	align-items:flex-start;
-}
-
-#search-By-Type {
-	margin-right: 20px;
-	margin-left: 0px;
 }
 
 .btn {
-	margin-left: 5px;
-	background-color: #744a1a;
+	margin-left: 2px;
+	background-color: #363775;
 	color: white;
 }
 
 .btn:hover {
-	margin-left: 5px;
-	background-color: #412709;
+	background-color: #1f2046;
 	color: white;
 }
 
 #container {
 	display: flex;
 	flex-direction: column;
-	width: 100%;
+	align-items: center;
 }
 
 #principal {
 	display: flex;
 	justify-content: space-between;
-	background-color:  #e9c79f;
+}
+
+#title-section {
+	margin: 30px 0px 30px 0px;
+	color: white;
+	text-shadow: 0.1em 0.1em black;
+	font-weight: bolder;
+	width: 80%;
+	text-align: center;
 }
 
 #info-Pokemon {
@@ -63,35 +122,43 @@ main {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
+	padding-left: 0rem;
 }
 
 .li-pokemon {
+	color: white;
+	text-shadow: 0.1em 0.1em black;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	list-style-type: none;
 	font-weight: bolder;
-	background-color: #e9c79f;
-	padding: 20px;
-	margin: 15px;
-	width: 180px;
+	margin: 10px;
+	width: 200px;
 	height: 300px;
+	border-radius: 7px;
+	border: 1px solid rgb(116, 112, 112);
+	background-image: url('../imagens/wallpaper/wallpaper.jpg');
+	background-position: 5% 5%;
 }
 
 aside {
 	padding: 0px 0px 0px 0px;
-	margin-bottom: 20px;
-	width: 40%;
+	margin: 0px 20px 30px 0px;
+	width: 30%;
 }
 
 #div-lateral {
-	background-color: #e9c79f;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 #titulo-rolagem {
-	padding: 40px 0px 25px 0px;	
-	color:#412709;
+	padding: 10px 0px 0px 0px;
+	color: white;
+	text-shadow: 0.1em 0.1em black;
 	font-weight: bolder;
 	font-size: 1.3em;
 	text-align: center;
@@ -103,7 +170,7 @@ aside {
 }
 
 #btn-search-by-Type {
-	margin: 40px;
+	margin: 10px 0px 00px 0px;
 }
 
 #search-By-Name,
@@ -111,11 +178,11 @@ aside {
 #search-By-Name-selected {
 	display: flex;
 	flex-direction: row;
-	padding: 10px;
+	padding: 2px 10px 2px 10px;
 }
 
 .selected {
-	background-color: #e4b47d;
+	background-color: #363775 !important;
 }
 
 .pokemon-image-type {
@@ -123,9 +190,18 @@ aside {
 	padding: 5px;
 }
 
+.divLateral {
+	padding: 20px;
+}
+
+.imgLateral {
+	width: 100%;
+}
+
 footer {
 	padding: 30px;
-	background-color: #ccb0a0;
+	background-color: #1f2046;
+	color: white;
 }
 
 #img-footer {
@@ -137,7 +213,7 @@ li a {
 }
 
 ul li a {
-	color: black;
+	color: white;
 }
 
 hr {
@@ -151,7 +227,7 @@ hr {
 #barra-de-rolagem {
 	display: block;
 	width: 350px;
-	height: 200px;
+	height: 250px;
 	overflow-y: scroll;
 	scroll-behavior: smooth;
 }
