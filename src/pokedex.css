@@ -294,7 +294,7 @@ hr {
 	}
 
 	aside {
-		width: 75%;
+		width: 80%;
 		margin: auto;
 	}
 
@@ -383,5 +383,18 @@ hr {
 
 	.footer-copyright {
 		font-size: 1.3em;
+	}
+
+	hr {
+		width: 80%;
+		margin: auto;
+	}
+
+	.form-check {
+		width: 80%;
+	}
+
+	#hr {
+		margin: 20px;
 	}
 }
