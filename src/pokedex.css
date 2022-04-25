@@ -127,6 +127,7 @@ nav {
 	text-shadow: 0.1em 0.1em black;
 	font-weight: bolder;
 	text-align: left;
+	width: 100%;
 }
 
 #info-Pokemon {
@@ -159,7 +160,7 @@ nav {
 aside {
 	padding: 0px 0px 0px 0px;
 	margin: 0px 20px 30px 0px;
-	width: 30%;
+	width: 35%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -383,11 +384,6 @@ hr {
 
 	.footer-copyright {
 		font-size: 1.3em;
-	}
-
-	hr {
-		width: 80%;
-		margin: auto;
 	}
 
 	.form-check {
