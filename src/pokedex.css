@@ -233,10 +233,7 @@ hr {
 }
 
 @media (max-width: 800px) {
-	body {
-		background-color: red;
-	}
-
+	
 	header {
 		display: flex;
 		justify-content: center;
@@ -298,7 +295,7 @@ hr {
 		list-style-type: none;
 		font-weight: bolder;
 		margin: 10px;
-		width: 200px;
+		width: 170px;
 		height: 300px;
 		border-radius: 7px;
 		border: 1px solid rgb(116, 112, 112);
@@ -319,14 +316,33 @@ hr {
 	.col-sm-2 {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		align-items: center;
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 
+	
+
+	.ul-footer {
+		text-align: center;
+		padding: 20px 0px 20px 0px; 
+	}
+
+	.h5-footer {
+		text-align: center;
+		margin: 20px 0px 20px 0px;
+		font-size: 1.4em;
+	}
+
+	.ul-footer li {
+		list-style-type: none;
+		padding: 10px 0px 10px 0px;
+	}
+
+	#copyright {
+		text-align: center;
+	}
 	.footer-copyright {
-		width: 80%;
-	}
-
-	#img-footer 
+		font-size: 1.3em;
 	}
 }
