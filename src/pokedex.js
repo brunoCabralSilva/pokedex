@@ -42,19 +42,19 @@ function geraNomeComPrimeiraLetraMaiuscula(nome) {
   return nomeAlterado;
 }
 //gera da api todos os nomes dos pokémon existentes
-// for (let i = 1; i <= 898; i += 1) {
-//   fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-//     .then((resposta) => resposta.json())
-//     .then((respostaJson) => {
-//       const objetoPokemon = geraObjetoPokemon(respostaJson);
-//       const pokemon = document.createElement('option');
-//       pokemon.value = respostaJson.name;
-//       pokemon.innerText = `#${respostaJson.id} - ${respostaJson.name}`;
-//       selectByName.appendChild(pokemon);
-//       acrescentaPokemon(objetoPokemon);
-//     })
-//     .catch()
-// }
+for (let i = 1; i <= 898; i += 1) {
+  fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
+    .then((resposta) => resposta.json())
+    .then((respostaJson) => {
+      const objetoPokemon = geraObjetoPokemon(respostaJson);
+      const pokemon = document.createElement('option');
+      pokemon.value = respostaJson.name;
+      pokemon.innerText = `#${respostaJson.id} - ${respostaJson.name}`;
+      selectByName.appendChild(pokemon);
+      acrescentaPokemon(objetoPokemon);
+    })
+    .catch()
+}
 //Cria cada tipo de pokémon na barra lateral
 type.forEach((tipo) => {
   //cria de div para cada tipo que será exibido
@@ -77,7 +77,6 @@ type.forEach((tipo) => {
   //acrescenta para cada pai um filho
   newDiv.appendChild(newImage);
   newDiv.appendChild(newLabel);
-  
   buscaPorTipo.appendChild(newDiv);
 
   newDiv.addEventListener('mouseover', () => newDiv.style.backgroundColor = '#53549e');
