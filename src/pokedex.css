@@ -298,6 +298,9 @@ hr {
 		margin: auto;
 	}
 
+	#barra-de-rolagem {
+		height: 200px;
+	}
 
 	#search-By-Name,
 	#search-By-Generation,
