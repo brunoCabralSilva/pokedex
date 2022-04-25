@@ -55,7 +55,7 @@ for (let i = 1; i <= 898; i += 1) {
     })
     .catch()
 }
-//Cria cada tipo de pokémon na barra lateral
+//Cria cada tipo de pokémon na barra lateral.
 type.forEach((tipo) => {
   //cria de div para cada tipo que será exibido
   const newDiv = document.createElement('scroll-page');
