@@ -233,5 +233,35 @@ hr {
 }
 
 @media (max-width: 600px) {
-	body { background-color: red;}
+	body {
+		background-color: red;
+	}
+
+	.divLateral {
+		display: none;
+	}
+
+	nav {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	#search-By-Name,
+	#search-By-Generation,
+	#search-By-Name-selected {
+		display: flex;
+		flex-direction: row;
+		padding: 2px 10px 2px 10px;
+		margin: 10px 20px 10px 20px;
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#search-By-Type {
+		position: fixed;
+	}
 }
