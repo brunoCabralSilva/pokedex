@@ -384,4 +384,17 @@ hr {
 	.footer-copyright {
 		font-size: 1.3em;
 	}
+
+	hr {
+		width: 80%;
+		margin: auto;
+	}
+
+	.form-check {
+		width: 75%;
+	}
+
+	#hr {
+		margin: 20px;
+	}
 }
