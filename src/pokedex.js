@@ -41,7 +41,7 @@ function geraNomeComPrimeiraLetraMaiuscula(nome) {
   }
   return nomeAlterado;
 }
-//gera da api todos os nomes dos pokémon existentes
+//gera da api todos os nomes dos pokémon existentes.
 for (let i = 1; i <= 898; i += 1) {
   titleSection.innerText = `Bem Vindo! Abaixo, listamos todos os ${i} Pokémon!`
   fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
