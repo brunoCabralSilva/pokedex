@@ -160,7 +160,6 @@ function acessaApi(nome) {
     .then((response) => response.json())
     .then((responseJson) => {
       const objetoPokemon = geraObjetoPokemon(responseJson);
-      console.log(objetoPokemon);
       acrescentaPokemon(objetoPokemon);
     })
     .catch();
@@ -218,7 +217,7 @@ butonGeneration.addEventListener('click', () => {
       geraPorGeracao(810, 898, 'Oitava');
       break;
     default:
-      console.log('Esta geração não existe');
+      titleSection.innerText = 'Esta geração não existe';
       break;
   }
 });
