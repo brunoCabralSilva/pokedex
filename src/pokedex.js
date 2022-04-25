@@ -104,7 +104,6 @@ function acrescentaPokemon(objeto) {
   //cria parágrafo com nome e número do Pokémon
   const nomeMaiusculo = geraNomeComPrimeiraLetraMaiuscula(objeto.nome);
   const pNamePokemon = document.createElement('p');
-  pNamePokemon.style.fontSize = '21px';
   pNamePokemon.innerText = `${objeto.id} - ${nomeMaiusculo}`;
   //cria imagem para o pokémon
   const imagePokemon = document.createElement('img');
