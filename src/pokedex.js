@@ -43,13 +43,14 @@ function geraNomeComPrimeiraLetraMaiuscula(nome) {
 }
 //gera da api todos os nomes dos pokémon existentes
 for (let i = 1; i <= 898; i += 1) {
+  titleSection.innerText = `Bem Vindo! Abaixo, listamos todos os ${i} Pokémon!`
   fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
     .then((resposta) => resposta.json())
     .then((respostaJson) => {
       const objetoPokemon = geraObjetoPokemon(respostaJson);
       const pokemon = document.createElement('option');
       pokemon.value = respostaJson.name;
-      pokemon.innerText = `#${respostaJson.id} - ${respostaJson.name}`;
+      pokemon.innerText = `${respostaJson.id} - ${geraNomeComPrimeiraLetraMaiuscula(respostaJson.name)}`;
       selectByName.appendChild(pokemon);
       acrescentaPokemon(objetoPokemon);
     })
@@ -73,7 +74,7 @@ type.forEach((tipo) => {
   newLabel.innerText = tipo.tipo;
   newLabel.style.color = 'white';
   newLabel.style.textShadow = '0.1em 0.1em black';
-  newLabel.style.fontSize = '17px';
+  newLabel.style.fontSize = '18px';
   //acrescenta para cada pai um filho
   newDiv.appendChild(newImage);
   newDiv.appendChild(newLabel);
@@ -101,8 +102,9 @@ function acrescentaPokemon(objeto) {
   novoPokemon.setAttribute('class', 'li-pokemon');
   novoPokemon.textDecoration = 'none';
   //cria parágrafo com nome e número do Pokémon
-  const nomeMaiusculo = objeto.nome.toUpperCase();
+  const nomeMaiusculo = geraNomeComPrimeiraLetraMaiuscula(objeto.nome);
   const pNamePokemon = document.createElement('p');
+  pNamePokemon.style.fontSize = '21px';
   pNamePokemon.innerText = `${objeto.id} - ${nomeMaiusculo}`;
   //cria imagem para o pokémon
   const imagePokemon = document.createElement('img');
