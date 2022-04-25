@@ -42,20 +42,20 @@ function geraNomeComPrimeiraLetraMaiuscula(nome) {
   return nomeAlterado;
 }
 //gera da api todos os nomes dos pokémon existentes
-for (let i = 1; i <= 898; i += 1) {
-  titleSection.innerText = `Bem Vindo! Abaixo, listamos todos os ${i} Pokémon!`
-  fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-    .then((resposta) => resposta.json())
-    .then((respostaJson) => {
-      const objetoPokemon = geraObjetoPokemon(respostaJson);
-      const pokemon = document.createElement('option');
-      pokemon.value = respostaJson.name;
-      pokemon.innerText = `${respostaJson.id} - ${geraNomeComPrimeiraLetraMaiuscula(respostaJson.name)}`;
-      selectByName.appendChild(pokemon);
-      acrescentaPokemon(objetoPokemon);
-    })
-    .catch()
-}
+// for (let i = 1; i <= 898; i += 1) {
+//   titleSection.innerText = `Bem Vindo! Abaixo, listamos todos os ${i} Pokémon!`
+//   fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
+//     .then((resposta) => resposta.json())
+//     .then((respostaJson) => {
+//       const objetoPokemon = geraObjetoPokemon(respostaJson);
+//       const pokemon = document.createElement('option');
+//       pokemon.value = respostaJson.name;
+//       pokemon.innerText = `${respostaJson.id} - ${geraNomeComPrimeiraLetraMaiuscula(respostaJson.name)}`;
+//       selectByName.appendChild(pokemon);
+//       acrescentaPokemon(objetoPokemon);
+//     })
+//     .catch()
+// }
 //Cria cada tipo de pokémon na barra lateral
 type.forEach((tipo) => {
   //cria de div para cada tipo que será exibido
