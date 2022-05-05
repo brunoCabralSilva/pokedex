@@ -22,6 +22,10 @@ p {
 	text-align: center;
 }
 
+#img-todos-pokemon {
+	margin-left: 20px;
+}
+
 @keyframes mudaImagens {
 	0% {
 		background-image: url('../imagens/wallpaper/gengar.jpg');
@@ -80,8 +84,6 @@ p {
 	height: 300px;
 }
 
-main {}
-
 nav {
 	display: flex;
 	flex-direction: row;
@@ -92,6 +94,14 @@ nav {
 	flex-direction: row-reverse;
 	align-items: baseline;
 	justify-content: space-evenly;
+	width: 100%;
+}
+
+#label-todos-pokemon {
+	padding-left: 15px;
+	color: white;
+	text-shadow: black 0.1em 0.1em;
+	font-size: 18px;
 }
 
 .btn {
@@ -105,6 +115,61 @@ nav {
 	color: white;
 }
 
+#menu {
+	display: flex;
+	align-items: baseline;
+}
+
+#carregando {
+	display: none;
+	margin-left: 30px;
+	margin-bottom: 30px;
+	min-width: 40px;
+	margin-top: 0px;
+}
+
+.loading {
+	background-color: white;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	box-shadow: 0 0 1em rgb(193, 2, 252);
+	animation: rotation 0.9s linear infinite;
+	position: absolute;
+	transform: translate(0px, -30px);
+}
+
+.loading:nth-child(1) {
+	animation-delay: 0s;
+}
+
+#btn-more-20-Pokemon {
+	display: flex;
+	justify-content: center;
+}
+
+.loading:nth-child(2) {
+	animation-delay: 0.30s;
+}
+
+.loading:nth-child(3) {
+	animation-delay: 0.60s;
+}
+
+@keyframes rotation {
+	0% {
+		transform: translate(0px, -30px);
+	}
+
+	33% {
+		transform: translate(30px, -30px);
+	}
+
+	66% {
+		transform: translate(15px, 0px);
+	}
+}
+
 #container {
 	display: flex;
 	flex-direction: column;
@@ -116,6 +181,170 @@ nav {
 	justify-content: space-between;
 }
 
+#teste2 {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	align-items: left;
+}
+
+#divPokemonEscolhido {
+	width: 70%;
+}
+
+#primeiraSecao {
+	display: flex;
+	margin-left: 25px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+	background-image: url('../imagens/wallpaper/wallpaper.jpg');
+	padding: 20px;
+	line-height: 1.8;
+	width: 45%;
+	border: 2px solid rgb(116, 112, 112);
+}
+
+#divStats {
+	width: 49%;
+	border-radius: 8px;
+	background-image: url('../imagens/wallpaper/wallpaper.jpg');
+	padding: 20px 10px;
+	margin: 0px 0px 0px 10px;
+	display: flex;
+	justify-content: center;
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	border: 2px solid rgb(116, 112, 112);
+}
+
+#divCadaStatAgrupado {
+	display: flex;
+	font-weight: bolder;
+}
+
+#divInfoValor {
+	color: white;
+	padding-left: 10px;
+}
+
+#divDadosIniciais {
+	display: flex;
+	color: white;
+	text-shadow: black 0.1em 0.1em;
+	font-size: 18px;
+	font-weight: bolder;
+	flex-direction: column;
+	justify-content: left;
+	padding-left: 10px;
+	line-height: 2.3;
+}
+
+
+.divtabela {
+	height: 30px;
+	background-color: white;
+	margin: 0px 0px 14px 0px;
+	display: flex;
+	color: black;
+	font-weight: bolder;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#info-pokemon-escolhido {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#divDuasDivs {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 10px;
+	justify-content: none;
+	align-items: none;
+}
+
+#divParaDivTipos {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+}
+
+#divDadosIniciais p {
+	text-align: left;
+	margin-bottom: 0px;
+	padding-right: 25px;
+}
+
+#divMoves {
+	padding: 20px;
+	color: white;
+	text-shadow: black 0.1em 0.1em;
+	background-image: url('../imagens/wallpaper/wallpaper.jpg');
+	background-size: cover;
+	width: 95%;
+	margin-left: 25px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	border: 2px solid rgb(116, 112, 112);
+}
+
+
+
+#divMoves li {
+	list-style-type: circle;
+	padding: 7px;
+	text-align: left;
+	line-height: 1;
+	font-size: 1.3em;
+}
+
+#movesUl {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+#divUl {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+#titleMoves {
+	text-align: left;
+	font-weight: bolder;
+	font-size: 1.8em;
+	padding-bottom: 20px;
+}
+
+.pokemon-image-type-mostra {
+	padding: 6px 6px 0px 0px;
+}
+
+
+#divImg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.divTipos {
+	display: flex;
+	align-items: center;
+}
+
+.btn-more-20-Pokémon {
+	display: none;
+}
+
 #info-cada-Pokemon {
 	display: flex;
 	flex-direction: column;
@@ -123,12 +352,11 @@ nav {
 }
 
 #title-section {
-	margin: 30px 00px 30px 25px;
+	margin: 30px 0px 30px 25px;
 	color: white;
 	text-shadow: 0.1em 0.1em black;
 	font-weight: bolder;
-	text-align: left;
-	width: 100%;
+	width: 90%;
 }
 
 #info-Pokemon {
@@ -170,7 +398,6 @@ aside {
 #info {
 	width: 100%;
 }
-
 
 #titulo-rolagem {
 	padding: 10px 0px 0px 0px;
@@ -270,6 +497,7 @@ hr {
 		flex-direction: column;
 		align-items: baseline;
 		justify-content: center;
+		width: 100%;
 	}
 
 	.divLateral {
@@ -288,6 +516,84 @@ hr {
 		width: 100%;
 	}
 
+	#divDuasDivs {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 10px;
+		width: 80%;
+	}
+	#divMoves ul{
+	 	padding-left: 0;
+	}
+	#divMoves li {
+		list-style-type: none;
+		text-align: center;
+		padding: 7px;
+		line-height: 1;
+		font-size: 1.8em;
+	}
+
+	#info-pokemon-escolhido {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#divStats {
+		width: 95%;
+		border-radius: 8px;
+		background-image: url('../imagens/wallpaper/wallpaper.jpg');
+		padding: 20px 10px;
+		margin: 10px 0px 0px 0px;
+		display: flex;
+		justify-content: center;
+		font-size: 18px;
+		display: flex;
+		flex-direction: column;
+		border: 2px solid rgb(116, 112, 112);
+	}
+
+	#primeiraSecao {
+	display: flex;
+	margin-left: 0px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+	background-image: url('../imagens/wallpaper/wallpaper.jpg');
+	padding: 20px;
+	line-height: 1.8;
+	width: 95%;
+	border: 2px solid rgb(116, 112, 112);
+}
+
+	#teste2 {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+	}
+
+	#menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#carregando {
+		display: none;
+		margin-left: 0px;
+		margin-bottom: 0px;
+		min-width: 40px;
+		margin-top: 80px;
+	}
+
 	nav {
 		display: flex;
 		flex-direction: column;
@@ -297,6 +603,34 @@ hr {
 	aside {
 		width: 70%;
 		margin: auto;
+	}
+
+	#divMoves {
+		padding: 20px;
+		color: white;
+		text-shadow: black 0.1em 0.1em;
+		background-image: url('../imagens/wallpaper/wallpaper.jpg');
+		background-size: cover;
+		width: 76%;
+		margin-left: 0px;
+		border-radius: 8px;
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		border: 2px solid rgb(116, 112, 112);
+	}
+
+	#divUl {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	#titleMoves {
+		text-align: center;
+		font-weight: bolder;
+		font-size: 1.8em;
+		padding-bottom: 20px;
 	}
 
 	#barra-de-rolagem {
@@ -321,6 +655,7 @@ hr {
 
 
 	#title-section {
+		margin: 30px 0px 30px 0px;
 		width: 90%;
 		margin-top: 30px auto;
 		padding-top: 0px;
@@ -385,9 +720,6 @@ hr {
 
 	.footer-copyright {
 		font-size: 1.3em;
-	}
-
-	.form-check {
 	}
 
 	#hr {
