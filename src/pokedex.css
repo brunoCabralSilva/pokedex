@@ -196,7 +196,7 @@ nav {
 #primeiraSecao {
 	display: flex;
 	margin-left: 25px;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 	border-radius: 8px;
 	background-image: url('../imagens/wallpaper/wallpaper.jpg');
@@ -363,7 +363,7 @@ nav {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-evenly;
 	flex-wrap: wrap;
 	padding-left: 0rem;
 }
@@ -522,11 +522,13 @@ hr {
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 10px;
-		width: 80%;
+		width: 100%;
 	}
-	#divMoves ul{
-	 	padding-left: 0;
+
+	#divMoves ul {
+		padding-left: 0;
 	}
+
 	#divMoves li {
 		list-style-type: none;
 		text-align: center;
@@ -544,7 +546,7 @@ hr {
 	}
 
 	#divStats {
-		width: 95%;
+		width: 100%;
 		border-radius: 8px;
 		background-image: url('../imagens/wallpaper/wallpaper.jpg');
 		padding: 20px 10px;
@@ -558,17 +560,17 @@ hr {
 	}
 
 	#primeiraSecao {
-	display: flex;
-	margin-left: 0px;
-	justify-content: center;
-	align-items: center;
-	border-radius: 8px;
-	background-image: url('../imagens/wallpaper/wallpaper.jpg');
-	padding: 20px;
-	line-height: 1.8;
-	width: 95%;
-	border: 2px solid rgb(116, 112, 112);
-}
+		display: flex;
+		margin-left: 0px;
+		justify-content: space-evenly;
+		align-items: center;
+		border-radius: 8px;
+		background-image: url('../imagens/wallpaper/wallpaper.jpg');
+		padding: 20px;
+		line-height: 1.8;
+		width: 100%;
+		border: 2px solid rgb(116, 112, 112);
+	}
 
 	#teste2 {
 		width: 90%;
@@ -611,7 +613,7 @@ hr {
 		text-shadow: black 0.1em 0.1em;
 		background-image: url('../imagens/wallpaper/wallpaper.jpg');
 		background-size: cover;
-		width: 76%;
+		width: 100%;
 		margin-left: 0px;
 		border-radius: 8px;
 		text-align: left;
