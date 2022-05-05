@@ -363,7 +363,7 @@ nav {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	flex-wrap: wrap;
 	padding-left: 0rem;
 }
@@ -514,6 +514,15 @@ hr {
 		justify-content: center;
 		margin: auto;
 		width: 100%;
+	}
+
+	#info-Pokemon {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		padding-left: 0rem;
 	}
 
 	#divDuasDivs {
