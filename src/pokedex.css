@@ -556,17 +556,17 @@ hr {
 	}
 
 	#divDadosIniciais {
-	display: flex;
-	color: white;
-	text-shadow: black 0.1em 0.1em;
-	font-size: 18px;
-	font-weight: bolder;
-	flex-direction: column;
-	justify-content: left;
-	padding-left: 10px;
-	line-height: 2.3;
-	width: 45%;
-}
+		display: flex;
+		color: white;
+		text-shadow: black 0.1em 0.1em;
+		font-size: 18px;
+		font-weight: bolder;
+		flex-direction: column;
+		justify-content: left;
+		padding-left: 10px;
+		line-height: 2.3;
+		width: 45%;
+	}
 
 	#divStats {
 		width: 90%;
