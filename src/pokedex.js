@@ -154,7 +154,7 @@ function dadosPokemon(pokemon) {
     divInfoValor.setAttribute('id', 'divInfoValor');
     const div = document.createElement('div');
     divInfoValor.innerText = `${stat.base_stat}`;
-    const width = stat.base_stat * 2.4;
+    const width = stat.base_stat * 1.95;
     div.style.minWidth = `${width}px`;
     div.setAttribute('class', 'divtabela');
     div.setAttribute('id', width);
