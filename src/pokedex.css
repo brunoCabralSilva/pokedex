@@ -210,7 +210,7 @@ nav {
 	width: 49%;
 	border-radius: 8px;
 	background-image: url('../imagens/wallpaper/wallpaper.jpg');
-	padding: 20px 10px;
+	padding: 20px 30px;
 	margin: 0px 0px 0px 10px;
 	display: flex;
 	justify-content: center;
@@ -569,10 +569,10 @@ hr {
 }
 
 	#divStats {
-		width: 100%;
+		width: 90%;
 		border-radius: 8px;
 		background-image: url('../imagens/wallpaper/wallpaper.jpg');
-		padding: 20px 10px;
+		padding: 20px 15px;
 		margin: 10px 0px 0px 0px;
 		display: flex;
 		justify-content: center;
@@ -591,7 +591,7 @@ hr {
 		background-image: url('../imagens/wallpaper/wallpaper.jpg');
 		padding: 20px;
 		line-height: 1.8;
-		width: 100%;
+		width: 90%;
 		border: 2px solid rgb(116, 112, 112);
 	}
 
@@ -636,7 +636,7 @@ hr {
 		text-shadow: black 0.1em 0.1em;
 		background-image: url('../imagens/wallpaper/wallpaper.jpg');
 		background-size: cover;
-		width: 100%;
+		width: 90%;
 		margin-left: 0px;
 		border-radius: 8px;
 		text-align: left;
