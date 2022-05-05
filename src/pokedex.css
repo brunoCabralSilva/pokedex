@@ -563,23 +563,13 @@ hr {
 		font-weight: bolder;
 		flex-direction: column;
 		justify-content: left;
-		padding-left: 10px;
+		padding-left: 0px;
 		line-height: 2.3;
 		width: 45%;
 	}
 
-	#divStats {
-		width: 90%;
-		border-radius: 8px;
-		background-image: url('../imagens/wallpaper/wallpaper.jpg');
-		padding: 20px 15px;
-		margin: 10px 0px 0px 0px;
-		display: flex;
-		justify-content: center;
-		font-size: 18px;
-		display: flex;
-		flex-direction: column;
-		border: 2px solid rgb(116, 112, 112);
+	#divImg {
+		width: 50%;
 	}
 
 	#primeiraSecao {
@@ -592,6 +582,22 @@ hr {
 		padding: 20px;
 		line-height: 1.8;
 		width: 90%;
+		border: 2px solid rgb(116, 112, 112);
+	}
+
+	
+
+	#divStats {
+		width: 90%;
+		border-radius: 8px;
+		background-image: url('../imagens/wallpaper/wallpaper.jpg');
+		padding: 20px 15px;
+		margin: 10px 0px 0px 0px;
+		display: flex;
+		justify-content: center;
+		font-size: 18px;
+		display: flex;
+		flex-direction: column;
 		border: 2px solid rgb(116, 112, 112);
 	}
 
